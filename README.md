@@ -1,5 +1,6 @@
 # angular-client-base
 
+Base on git://github.com/joshdmiller/ng-boilerplate. I created simple project to get started with angularjs, LESS, GRUNT
 
 ## Quick Start
 

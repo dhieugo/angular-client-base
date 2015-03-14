@@ -20,6 +20,7 @@ angular.module( 'angularClientBase', [
                 },
                 data:{ pageTitle: 'Root' }
             });
+        $urlRouterProvider.otherwise( '/' );
     })
 
     .run( function run () {
