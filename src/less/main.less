@@ -1,0 +1,64 @@
+/**
+ * This is the main application stylesheet. It should include or import all
+ * stylesheets used throughout the application as this is the only stylesheet in
+ * the Grunt configuration that is automatically processed.
+ */
+
+
+/**
+ * First, we include the Twitter Bootstrap LESS files. Only the ones used in the
+ * project should be imported as the rest are just wasting space.
+ */
+
+@import '../../vendor/bootstrap/less/bootstrap.less';
+
+
+/**
+ * This is our main variables file. We must include it last so we can overwrite any variable
+ * definitions in our imported stylesheets.
+ */
+
+@import 'variables.less';
+
+/*Some example code for LESS*/
+
+.rounded_top {
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.tab {
+  background: #333;
+  color:#fff;
+  .rounded_top;
+}
+.submit {
+  .rounded_top;
+}
+
+.rounded_top {
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.tab {
+  background: #333;
+  color:#fff;
+  .rounded_top;
+}
+.submit {
+  .tab;
+  background: red;
+}
+
+.myavatar {
+  background: url("images/avatar.jpg") no-repeat center center;
+  width: 50px;
+  height: 50px;
+}

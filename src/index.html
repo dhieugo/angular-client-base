@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="angularClientBase" ng-controller="AppCtrl">
+<head lang="en">
+
+    <title ng-bind="pageTitle"></title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar navbar-default">
+            <div class="collapse navbar-collapse" collapse="menuCollapsed">
+                <ul class="nav navbar-nav">
+                    <li ui-sref-active="active">
+                        <a href ui-sref="root">
+                            <i class="fa fa-home"></i>
+                            Root
+                        </a>
+                    </li>
+
+                    <li ui-sref-active="active">
+                        <a href ui-sref="home">
+                            <i class="fa fa-home"></i>
+                            Home
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container" ui-view="main"></div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
